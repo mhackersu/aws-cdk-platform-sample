@@ -7,4 +7,4 @@ Completed:
 - [x] Project Refinements (Organizing code blocks)
 
 Next steps
-- [ ] [Docker Image Build](https://aws.amazon.com/blogs/containers/building-container-images-on-amazon-ecs-on-aws-fargate/)
+- [ ] [Docker Image Build](https://aws.amazon.com/blogs/containers/building-container-images-on-amazon-ecs-on-aws-fargate/) (Might lean here to use an hosted build agent for reasons related to signed provenance.)
