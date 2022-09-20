@@ -32,26 +32,24 @@ export class EcsStack extends cdk.Stack {
     });
 
     // Create a load-balanced Fargate service and make it public
-    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "FargateServiceBackend", {
+    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "FargateServiceProducerAPI", {
       cluster: cluster, // Required
       cpu: 512, // Default is 256
       desiredCount: 6, // Default is 1
-      // taskImageOptions: { image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample") },
       taskImageOptions: {
-        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../app/producer'))
+        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../src/app/producer/api'))
       }
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: true // Default is true
     });
 
     // Create a load-balanced Fargate service and make it private
-    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "FargateServiceFrontEnd", {
+    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "FargateServiceProducerMiddleware", {
       cluster: cluster, // Required
       cpu: 512, // Default is 256
       desiredCount: 6, // Default is 1
-      // taskImageOptions: { image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample") },
       taskImageOptions: {
-        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../app/producer'))
+        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../src/app/producer/middleware'))
       }
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: false // Default is true
