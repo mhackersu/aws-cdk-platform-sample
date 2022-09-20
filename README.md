@@ -16,3 +16,16 @@ Buiid Notes:
 - For AWS ECR things, we will have to deal with creds.
 - For a S3 route, we will have to build locally first; We'll need to pass along metadata.
 - Might lean here to use an hosted build agent for reasons related to signed provenance.
+
+# Thinking about CDK
+
+### From a DevX Perspective
+- Engineering enthusiasm!
+- Enabling and empowering the developer!
+- Helps with the onboarding process!
+
+### From an Ops Perspective
+- How much time will be spent with runtime debugging headaches?
+- What ongoing meta-responsibilities will be involved for DevOps?
+- How maintainable is the app's CDK code?
+- How many programming languages are DevOps engineers expected to know?
