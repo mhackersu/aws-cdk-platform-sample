@@ -4,6 +4,7 @@ import * as s3 from "aws-cdk-lib/aws-s3";
 import * as ec2 from "aws-cdk-lib/aws-ec2";
 import * as ecs from "aws-cdk-lib/aws-ecs";
 import * as ecs_patterns from "aws-cdk-lib/aws-ecs-patterns";
+import path = require('path');
 
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
@@ -37,8 +38,8 @@ export class EcsStack extends cdk.Stack {
       cpu: 512, // Default is 256
       desiredCount: 6, // Default is 1
       taskImageOptions: {
-        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../../src/app/producer/api'))
-      }
+        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../../src/app/producer/api')) },
+      // taskImageOptions: { image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample") },
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: true // Default is true
     });
@@ -49,8 +50,8 @@ export class EcsStack extends cdk.Stack {
       cpu: 512, // Default is 256
       desiredCount: 6, // Default is 1
       taskImageOptions: {
-        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../../src/app/producer/middleware'))
-      }
+        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../../src/app/producer/middleware')) },
+      // taskImageOptions: { image: ecs.ContainerImage.fromRegistry("amazon/amazon-ecs-sample") },
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: false // Default is true
     });
