@@ -29,3 +29,7 @@ Buiid Notes:
 - What ongoing meta-responsibilities will be involved for DevOps?
 - How maintainable is the app's CDK code?
 - How many programming languages are DevOps engineers expected to know?
+
+# Thinking about AdHoc things
+- Handle AWS sandbox account provisioning and deprovisioning
+- Building and running Dockerfiles inside Dockerfiles with localcdk
