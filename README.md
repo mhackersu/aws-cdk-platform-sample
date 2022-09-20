@@ -32,4 +32,4 @@ Buiid Notes:
 
 # Thinking about AdHoc things
 - Handle AWS sandbox account provisioning and deprovisioning
-- Building and running Dockerfiles inside Dockerfiles with localcdk
+- Running nested Dockerfiles with localcdk
