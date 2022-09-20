@@ -8,11 +8,11 @@ Completed:
 
 Next steps
 - [ ] [Docker Image Build & Publish]
+  - **Notes:**
+  - [Kaniko](https://aws.amazon.com/blogs/containers/building-container-images-on-amazon-ecs-on-aws-fargate/)
   - **Options:**
   - CI platform with hosted build agent
   - CI env itself (nested Dockerfile) if it's sometime a bit more adhoc.
-
-https://aws.amazon.com/blogs/containers/building-container-images-on-amazon-ecs-on-aws-fargate/)
 
 Buiid Notes:
 - For AWS ECR things, we will have to deal with creds.
