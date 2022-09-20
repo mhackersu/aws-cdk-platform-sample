@@ -37,7 +37,7 @@ export class EcsStack extends cdk.Stack {
       cpu: 512, // Default is 256
       desiredCount: 6, // Default is 1
       taskImageOptions: {
-        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../src/app/producer/api'))
+        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../../src/app/producer/api'))
       }
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: true // Default is true
@@ -49,7 +49,7 @@ export class EcsStack extends cdk.Stack {
       cpu: 512, // Default is 256
       desiredCount: 6, // Default is 1
       taskImageOptions: {
-        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../src/app/producer/middleware'))
+        image: ecs.ContainerImage.fromAsset(path.resolve(__dirname, '../../src/app/producer/middleware'))
       }
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: false // Default is true
