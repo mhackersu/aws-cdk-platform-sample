@@ -8,7 +8,7 @@ Completed:
 
 Next steps
 - [ ] [Docker Image Build & Publish]
-  - **Options:
+  - **Options:**
   - CI platform with hosted build agent
   - CI env itself (nested Dockerfile) if it's sometime a bit more adhoc.
 
