@@ -8,7 +8,7 @@ Completed:
 
 Next steps
 - [ ] [Docker Image Build & Publish]
-  - *This makes most sense to do from a CI platform with either a hosted build agent or the CI env itself if it's an adhoc CI env.
+  - This makes most sense to do from a CI platform with either a hosted build agent or the CI env itself if it's an adhoc CI env.
 
 https://aws.amazon.com/blogs/containers/building-container-images-on-amazon-ecs-on-aws-fargate/)
 
