@@ -16,7 +16,8 @@ Next steps
 
 Buiid Notes:
 - For AWS ECR things, we will have to deal with creds.
-- For a S3 route, we will have to build locally first; We'll need to pass along metadata.
+- For a S3 route, we'll need to pass along metadata.
+- For both routes, we'll need to think about naming and prefixes and suffixes.
 - Might lean here to use an hosted build agent for reasons related to signed provenance.
 
 # Thinking about CDK
